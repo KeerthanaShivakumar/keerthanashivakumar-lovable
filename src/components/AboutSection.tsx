@@ -1,8 +1,7 @@
 import { motion } from "framer-motion";
-import { GraduationCap, Sparkles, Code } from "lucide-react";
+import { GraduationCap, Sparkles } from "lucide-react";
 
 const highlights = [
-  { icon: Code, label: "2+ Years", desc: "Professional Experience" },
   { icon: GraduationCap, label: "PES University", desc: "B.Tech CSE · 8.85 GPA" },
   { icon: Sparkles, label: "AWS Certified", desc: "Cloud Practitioner" },
 ];
@@ -34,7 +33,7 @@ const AboutSection = () => (
         and storytelling — a true Disney enthusiast at heart.
       </motion.p>
 
-      <div className="grid md:grid-cols-3 gap-6">
+      <div className="grid md:grid-cols-2 gap-6 max-w-lg mx-auto">
         {highlights.map((h, i) => (
           <motion.div
             key={h.label}
