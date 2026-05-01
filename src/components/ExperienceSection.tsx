@@ -55,13 +55,13 @@ const experiences = [
 ];
 
 const ExperienceSection = () => (
-  <section id="experience" className="py-14 px-6 bg-enchanted">
+  <section id="experience" className="py-10 px-6 bg-enchanted">
     <div className="container mx-auto max-w-3xl">
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="font-display text-3xl md:text-4xl text-gradient-gold text-center mb-8"
+        className="font-display text-3xl md:text-4xl text-gradient-gold text-center mb-6"
       >
         Experience
       </motion.h2>
@@ -77,7 +77,7 @@ const ExperienceSection = () => (
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 * i }}
-            className={`relative mb-8 pl-12 md:pl-0 md:w-1/2 ${
+            className={`relative mb-6 pl-12 md:pl-0 md:w-1/2 ${
               i % 2 === 0 ? "md:pr-12 md:text-right" : "md:ml-auto md:pl-12"
             }`}
           >

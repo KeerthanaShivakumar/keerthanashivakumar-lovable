@@ -40,7 +40,7 @@ const pubColor: Record<string, string> = {
 };
 
 const WritingSection = () => (
-  <section id="writing" className="py-14 px-6">
+  <section id="writing" className="py-10 px-6">
     <div className="container mx-auto max-w-5xl">
       <motion.h2
         initial={{ opacity: 0, y: 20 }}

@@ -8,7 +8,7 @@ const links = [
 ];
 
 const ContactSection = () => (
-  <section id="contact" className="py-14 px-6">
+  <section id="contact" className="py-10 px-6">
     <div className="container mx-auto max-w-2xl text-center">
       <motion.h2
         initial={{ opacity: 0, y: 20 }}

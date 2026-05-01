@@ -80,7 +80,7 @@ const ProjectsSection = () => {
   const visible = active === "All" ? projects : projects.filter((p) => p.category === active);
 
   return (
-    <section id="projects" className="py-14 px-6">
+    <section id="projects" className="py-10 px-6">
       <div className="container mx-auto max-w-5xl">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -113,7 +113,7 @@ const ProjectsSection = () => {
           ))}
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-2 gap-4">
           <AnimatePresence mode="popLayout">
             {visible.map((p) => (
               <motion.div

@@ -20,7 +20,7 @@ const skillGroups = [
 ];
 
 const SkillsSection = () => (
-  <section id="skills" className="py-14 px-6 bg-enchanted">
+  <section id="skills" className="py-10 px-6 bg-enchanted">
     <div className="container mx-auto max-w-4xl">
       <motion.h2
         initial={{ opacity: 0, y: 20 }}

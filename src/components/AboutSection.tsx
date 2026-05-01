@@ -9,7 +9,7 @@ const highlights = [
 
 
 const AboutSection = () => (
-  <section id="about" className="py-14 px-6">
+  <section id="about" className="py-10 px-6">
     <div className="container mx-auto max-w-4xl">
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
@@ -20,7 +20,7 @@ const AboutSection = () => (
         About Me
       </motion.h2>
 
-      <div className="flex flex-col md:flex-row items-center gap-10 mb-10">
+      <div className="flex flex-col md:flex-row items-center gap-8 mb-6">
         {/* Photo */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
@@ -29,13 +29,19 @@ const AboutSection = () => (
           className="shrink-0"
         >
           {profilePhoto ? (
-            <img
-              src={profilePhoto}
-              alt="Keerthana Shivakumar"
-              className="w-36 h-36 rounded-full object-contain object-top border-2 border-primary/40 glow-gold bg-muted"
-            />
+            <div className="relative w-36 h-36">
+              <img
+                src={profilePhoto}
+                alt="Keerthana Shivakumar"
+                className="w-full h-full rounded-full object-cover object-top"
+                style={{ maskImage: "radial-gradient(circle, black 60%, transparent 100%)", WebkitMaskImage: "radial-gradient(circle, black 60%, transparent 100%)" }}
+              />
+              {/* gradient ring */}
+              <div className="absolute inset-0 rounded-full"
+                style={{ background: "radial-gradient(circle, transparent 55%, rgba(212,175,55,0.35) 75%, transparent 100%)" }} />
+            </div>
           ) : (
-            <div className="w-32 h-32 rounded-full border-2 border-primary/30 bg-muted flex items-center justify-center">
+            <div className="w-36 h-36 rounded-full border-2 border-primary/30 bg-muted flex items-center justify-center">
               <span className="font-display text-3xl text-gradient-gold">KS</span>
             </div>
           )}
@@ -72,7 +78,7 @@ const AboutSection = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 * i }}
-            className="bg-card border border-border/50 rounded-xl p-6 text-center hover:glow-gold transition-shadow"
+            className="bg-card border border-border/50 rounded-xl p-4 text-center hover:glow-gold transition-shadow"
           >
             <h.icon className="w-8 h-8 text-primary mx-auto mb-3" />
             <p className="font-display text-lg text-foreground mb-1">{h.label}</p>
