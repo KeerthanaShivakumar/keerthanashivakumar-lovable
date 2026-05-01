@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
-import { ExternalLink, Github, Globe, FileText } from "lucide-react";
+import { ExternalLink, Github, Globe, FileText, BookOpen } from "lucide-react";
 
-type ProjectLink = { label: "github" | "demo" | "article"; href: string };
+type ProjectLink = { label: "github" | "demo" | "article" | "paper"; href: string };
 
 const projects: {
   title: string;
@@ -23,6 +23,17 @@ const projects: {
     title: "GAN-Based Dehazing Framework",
     tags: ["Python", "TensorFlow", "ML", "Research"],
     desc: "GAN-based multispectral image dehazing model outperforming existing methods on the SHIA dataset. Research presented at ISMSI 2024 international conference.",
+    links: [
+      { label: "paper", href: "https://dl.acm.org/doi/10.1145/3665065.3665087" },
+    ],
+  },
+  {
+    title: "Detection of Cyberbullying on Social Media Code Mixed Data",
+    tags: ["NLP", "Python", "Deep Learning", "Research"],
+    desc: "NLP research on detecting cyberbullying in code-mixed social media text. Developed classification models handling language-switching patterns in multilingual online content. Published at IEEE.",
+    links: [
+      { label: "paper", href: "https://ieeexplore.ieee.org/document/10555758" },
+    ],
   },
   {
     title: "Streaming Weather Data Pipeline",
@@ -116,6 +127,7 @@ const ProjectsSection = () => (
                     {link.label === "github" && <Github className="w-3.5 h-3.5" />}
                     {link.label === "demo" && <Globe className="w-3.5 h-3.5" />}
                     {link.label === "article" && <FileText className="w-3.5 h-3.5" />}
+                    {link.label === "paper" && <BookOpen className="w-3.5 h-3.5" />}
                     <span className="capitalize">{link.label}</span>
                   </a>
                 ))}
