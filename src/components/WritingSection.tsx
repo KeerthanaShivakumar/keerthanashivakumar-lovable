@@ -87,6 +87,24 @@ const WritingSection = () => (
           </motion.a>
         ))}
       </div>
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.4 }}
+        className="mt-6 text-center"
+      >
+        <a
+          href="https://medium.com/@shivakumarkeerthana"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 text-sm font-body text-muted-foreground hover:text-primary transition-colors"
+        >
+          See all on Medium
+          <ArrowUpRight className="w-3.5 h-3.5" />
+        </a>
+      </motion.div>
     </div>
   </section>
 );
