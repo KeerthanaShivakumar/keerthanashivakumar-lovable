@@ -23,12 +23,20 @@ const articles = [
     readTime: "Research paper",
     tag: "NLP",
   },
+  {
+    publication: "ACM",
+    title: "GAN-Based Multispectral Image Dehazing — ISMSI 2024",
+    href: "https://dl.acm.org/doi/10.1145/3665065.3665087",
+    readTime: "Research paper",
+    tag: "Computer Vision",
+  },
 ];
 
 const pubColor: Record<string, string> = {
   "Towards AI": "text-emerald-400",
   "Plain English AI": "text-sky-400",
   "IEEE": "text-blue-400",
+  "ACM": "text-violet-400",
 };
 
 const WritingSection = () => (
