@@ -27,7 +27,7 @@ const ContactSection = () => (
         className="font-body text-foreground/70 mb-10"
       >
         I'm always open to discussing new opportunities, collaborations, or
-        just chatting about tech and Disney movies!
+        just chatting about tech, jigsaws, Legos, or swimming!
       </motion.p>
 
       <motion.div

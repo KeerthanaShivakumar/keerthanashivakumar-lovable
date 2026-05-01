@@ -1,11 +1,23 @@
 import { motion } from "framer-motion";
 
+function tenureLabel(startYear: number, startMonth: number): string {
+  const now = new Date();
+  let months = (now.getFullYear() - startYear) * 12 + (now.getMonth() - startMonth);
+  if (months < 1) months = 1;
+  const yrs = Math.floor(months / 12);
+  const mos = months % 12;
+  const parts = [];
+  if (yrs > 0) parts.push(`${yrs} yr${yrs > 1 ? "s" : ""}`);
+  if (mos > 0) parts.push(`${mos} mo${mos > 1 ? "s" : ""}`);
+  return `Jul 2024 – Present · ${parts.join(" ")}`;
+}
+
 const experiences = [
   {
     title: "Software Engineer I",
     company: "JPMorganChase",
     location: "Bengaluru, India",
-    period: "Jul 2024 – Present",
+    period: tenureLabel(2024, 6),
     bullets: [
       "Designed Grafana observability dashboards and alerting pipelines, reducing MTTR during incident debugging.",
       "Re-architected Gradle build pipelines for distributed payment services with parallelized test execution across 100+ integration suites.",
