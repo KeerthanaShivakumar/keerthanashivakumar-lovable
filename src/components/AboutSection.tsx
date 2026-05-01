@@ -1,13 +1,17 @@
 import { motion } from "framer-motion";
 import { GraduationCap, Sparkles } from "lucide-react";
+// To add your photo: drop your image into src/assets/ and uncomment the line below
+// import profilePhoto from "@/assets/profile.jpg";
 
 const highlights = [
   { icon: GraduationCap, label: "PES University", desc: "B.Tech CSE · 8.85 GPA" },
   { icon: Sparkles, label: "AWS Certified", desc: "Cloud Practitioner" },
 ];
 
+const profilePhoto: string | null = null; // replace null with the import above once you add the file
+
 const AboutSection = () => (
-  <section id="about" className="py-24 px-6">
+  <section id="about" className="py-14 px-6">
     <div className="container mx-auto max-w-4xl">
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
@@ -18,20 +22,49 @@ const AboutSection = () => (
         About Me
       </motion.h2>
 
-      <motion.p
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ delay: 0.2 }}
-        className="font-body text-foreground/75 text-center leading-relaxed max-w-2xl mx-auto mb-14"
-      >
-        I'm a Software Engineer at JPMorganChase with a passion for building
-        robust distributed systems and intelligent AI-powered solutions. My
-        journey spans from re-architecting CI/CD pipelines for payment services
-        to designing RAG systems that ranked in a firm-wide hackathon. When I'm
-        not coding, you'll find me fascinated by the intersection of technology
-        and storytelling — a true Disney enthusiast at heart.
-      </motion.p>
+      <div className="flex flex-col md:flex-row items-center gap-10 mb-10">
+        {/* Photo */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          className="shrink-0"
+        >
+          {profilePhoto ? (
+            <img
+              src={profilePhoto}
+              alt="Keerthana Shivakumar"
+              className="w-32 h-32 rounded-full object-cover border-2 border-primary/40 glow-gold"
+            />
+          ) : (
+            <div className="w-32 h-32 rounded-full border-2 border-primary/30 bg-muted flex items-center justify-center">
+              <span className="font-display text-3xl text-gradient-gold">KS</span>
+            </div>
+          )}
+        </motion.div>
+
+        {/* Bio */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.2 }}
+          className="space-y-3"
+        >
+          <p className="font-body text-foreground/75 leading-relaxed">
+            Software Engineer at JPMorgan by day, incoming OMSCS student at Georgia Tech by
+            night. I get disproportionately excited about distributed systems, reinforcement
+            learning, and how Pixar's rendering pipeline makes fur look that good.
+          </p>
+          <p className="font-body text-foreground/75 leading-relaxed">
+            Off the keyboard: yoga to undo the hunching, Lego architecture sets for the
+            satisfaction of snapping things into place, a 1000-piece jigsaw always in progress
+            somewhere, and long swim sets to think through system design problems without a
+            whiteboard. Big fan of Disney and the art of computer graphics — the overlap between
+            math and magic never gets old.
+          </p>
+        </motion.div>
+      </div>
 
       <div className="grid md:grid-cols-2 gap-6 max-w-lg mx-auto">
         {highlights.map((h, i) => (
@@ -49,19 +82,6 @@ const AboutSection = () => (
           </motion.div>
         ))}
       </div>
-
-      {/* Photo placeholder */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ delay: 0.4 }}
-        className="mt-10 flex justify-center"
-      >
-        <div className="w-32 h-32 rounded-full border-2 border-primary/30 bg-muted flex items-center justify-center">
-          <span className="font-display text-3xl text-gradient-gold">KS</span>
-        </div>
-      </motion.div>
     </div>
   </section>
 );

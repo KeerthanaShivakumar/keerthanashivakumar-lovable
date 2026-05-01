@@ -80,7 +80,7 @@ const ProjectsSection = () => {
   const visible = active === "All" ? projects : projects.filter((p) => p.category === active);
 
   return (
-    <section id="projects" className="py-24 px-6">
+    <section id="projects" className="py-14 px-6">
       <div className="container mx-auto max-w-5xl">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -96,7 +96,7 @@ const ProjectsSection = () => {
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="flex flex-wrap justify-center gap-2 mb-12"
+          className="flex flex-wrap justify-center gap-2 mb-8"
         >
           {FILTERS.map((f) => (
             <button

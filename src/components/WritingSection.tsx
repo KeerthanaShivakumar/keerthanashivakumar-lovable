@@ -40,13 +40,13 @@ const pubColor: Record<string, string> = {
 };
 
 const WritingSection = () => (
-  <section id="writing" className="py-24 px-6">
+  <section id="writing" className="py-14 px-6">
     <div className="container mx-auto max-w-5xl">
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="font-display text-3xl md:text-4xl text-gradient-gold text-center mb-16"
+        className="font-display text-3xl md:text-4xl text-gradient-gold text-center mb-8"
       >
         Writing
       </motion.h2>

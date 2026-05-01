@@ -20,13 +20,13 @@ const skillGroups = [
 ];
 
 const SkillsSection = () => (
-  <section id="skills" className="py-24 px-6 bg-enchanted">
+  <section id="skills" className="py-14 px-6 bg-enchanted">
     <div className="container mx-auto max-w-4xl">
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="font-display text-3xl md:text-4xl text-gradient-gold text-center mb-16"
+        className="font-display text-3xl md:text-4xl text-gradient-gold text-center mb-8"
       >
         Technical Skills
       </motion.h2>
