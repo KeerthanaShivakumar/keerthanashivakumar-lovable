@@ -56,16 +56,13 @@ const AboutSection = () => (
           className="space-y-3"
         >
           <p className="font-body text-foreground/75 leading-relaxed">
-            Software Engineer at JPMorgan by day, incoming OMSCS student at Georgia Tech by
-            night. I get disproportionately excited about distributed systems, reinforcement
-            learning, and how Pixar's rendering pipeline makes fur look that good.
-          </p>
-          <p className="font-body text-foreground/75 leading-relaxed">
-            Off the keyboard: yoga to undo the hunching, Lego architecture sets for the
-            satisfaction of snapping things into place, a 1000-piece jigsaw always in progress
-            somewhere, and long swim sets to think through system design problems without a
-            whiteboard. Big fan of Disney and the art of computer graphics — the overlap between
-            math and magic never gets old.
+            Software Engineer at JPMorganChase by day, distributed systems and reinforcement
+            learning enthusiast by night. I get disproportionately excited about the intersection
+            of math and magic—especially how Pixar's rendering pipelines make animated fur look
+            so incredibly real. Off the keyboard, you'll find me doing yoga to undo the desk
+            hunch, snapping Lego architecture sets together, or chipping away at a 1000-piece
+            jigsaw puzzle. I also rely on long swim sets as my favorite way to think through
+            complex system design problems when I don't have a whiteboard handy.
           </p>
         </motion.div>
       </div>
