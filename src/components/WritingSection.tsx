@@ -25,7 +25,7 @@ const articles = [
   },
   {
     publication: "ACM",
-    title: "GAN-Based Multispectral Image Dehazing — ISMSI 2024",
+    title: "Enhancing Multispectral Vision: A GAN-Based Dehazing Framework for Improved Image Clarity",
     href: "https://dl.acm.org/doi/10.1145/3665065.3665087",
     readTime: "Research paper",
     tag: "Computer Vision",
