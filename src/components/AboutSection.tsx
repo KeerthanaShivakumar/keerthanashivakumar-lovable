@@ -32,7 +32,7 @@ const AboutSection = () => (
             <img
               src={profilePhoto}
               alt="Keerthana Shivakumar"
-              className="w-32 h-32 rounded-full object-cover border-2 border-primary/40 glow-gold"
+              className="w-36 h-36 rounded-full object-contain object-top border-2 border-primary/40 glow-gold bg-muted"
             />
           ) : (
             <div className="w-32 h-32 rounded-full border-2 border-primary/30 bg-muted flex items-center justify-center">
