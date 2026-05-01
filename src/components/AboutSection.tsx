@@ -1,14 +1,12 @@
 import { motion } from "framer-motion";
 import { GraduationCap, Sparkles } from "lucide-react";
-// To add your photo: drop your image into src/assets/ and uncomment the line below
-// import profilePhoto from "@/assets/profile.jpg";
+import profilePhoto from "@/assets/profile.jpg";
 
 const highlights = [
   { icon: GraduationCap, label: "PES University", desc: "B.Tech CSE · 8.85 GPA" },
   { icon: Sparkles, label: "AWS Certified", desc: "Cloud Practitioner" },
 ];
 
-const profilePhoto: string | null = null; // replace null with the import above once you add the file
 
 const AboutSection = () => (
   <section id="about" className="py-14 px-6">
